@@ -2,6 +2,8 @@ package codeAlong52026;
 
 public class Constants {
     public static final String PANE_COLOR = "-fx-background-color: lightblue";
+    public static final int SCENE_SIZE = 500;
+
     public static final int FIRST_LEAF_X = 50;
     public static final int FIRST_LEAF_Y = 50;
     public static final double X_RAD = 10.0;
