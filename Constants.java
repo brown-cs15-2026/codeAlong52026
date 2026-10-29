@@ -14,7 +14,4 @@ public class Constants {
     public static final double STEM_HEIGHT = 10;
     public static final double STEM_X_OFFSET = 3.0;
     public static final double STEM_Y_OFFSET = 19.0;
-
-
-
 }
