@@ -22,7 +22,6 @@ public class PaneOrganizer {
         gamePane.setPrefSize(500, 500);
         gamePane.setStyle(Constants.PANE_COLOR);
 
-
         this.rootPane.setCenter(gamePane);
         new Game(gamePane);
     }
