@@ -19,9 +19,8 @@ public class PaneOrganizer {
     private void setUpGame() {
         Pane gamePane = new Pane();
         gamePane.setFocusTraversable(true);
-        gamePane.setPrefSize(500, 500);
-        gamePane.setStyle("-fx-background-color: lightblue;");
-
+        gamePane.setPrefSize(Constants.SCENE_SIZE, Constants.SCENE_SIZE);
+        gamePane.setStyle(Constants.PANE_COLOR);
 
         this.rootPane.setCenter(gamePane);
         new Game(gamePane);

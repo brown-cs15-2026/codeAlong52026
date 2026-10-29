@@ -14,15 +14,15 @@ public class Game {
     public Game (Pane gamePane) {
         this.gamePane = gamePane;
         this.gamePane.setOnKeyPressed((KeyEvent e) -> this.handleKeyPress(e));
-        Leaf firstLeaf = new Leaf(this.gamePane, Color.RED, 50, 50);
+        Leaf firstLeaf = new Leaf(this.gamePane, Color.RED, Constants.FIRST_LEAF_X, Constants.FIRST_LEAF_Y);
 
         this.leafArrayList = new ArrayList<>();
         this.leafArrayList.add(firstLeaf);
     }
 
     private void addLeaf() {
-        int x = this.generateRandomCoordinates(30, 470);
-        int y = this.generateRandomCoordinates(30, 470);
+        int x = this.generateRandomCoordinates(Constants.LOW_COORD, Constants.HIGH_COORD);
+        int y = this.generateRandomCoordinates(Constants.LOW_COORD, Constants.HIGH_COORD);
         Leaf newLeaf;
 
         int rand = (int)(Math.random() * 4);
@@ -101,12 +101,12 @@ public class Game {
     }
 
     private void scrollDown() {
-        int offset = 50;
+        int offset = Constants.SCROLL_OFFSET;
         for (int i = 0; i < this.leafArrayList.size(); i++) {
             Leaf currLeaf = this.leafArrayList.get(i);
             currLeaf.lowerY(offset);
 
-            if (currLeaf.getY() > 500) {
+            if (currLeaf.getY() > Constants.Y_MAX) {
                 this.leafArrayList.remove(i);
                 currLeaf.removeGraphically();
                 i--;
