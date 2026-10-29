@@ -22,16 +22,18 @@ public class Leaf {
     }
 
     private void setUpLeaf(int x, int y) {
-        this.leafBody = new Ellipse(x, y, 10.0, 20.0);
-        this.leafLeft = new Ellipse(x - 10, y + 5, 10.0, 15.0);
-        this.leafRight = new Ellipse(x + 10, y + 5, 10.0, 15.0);
+        this.leafBody = new Ellipse(x, y, Constants.X_RAD, Constants.Y_RAD_BODY);
+        this.leafLeft = new Ellipse(x - Constants.X_OFFSET,
+                y + Constants.Y_OFFSET, Constants.X_RAD, Constants.Y_RAD);
+        this.leafRight = new Ellipse(x + Constants.X_OFFSET,
+                y + Constants.Y_OFFSET, Constants.X_RAD, Constants.Y_RAD);
 
-        this.leafLeft.setRotate(-40.0);
-        this.leafRight.setRotate(40.0);
+        this.leafLeft.setRotate(-Constants.ROTATE);
+        this.leafRight.setRotate(Constants.ROTATE);
 
-        this.leafStem = new Rectangle(6, 10);
-        this.leafStem.setX(x - 3.0);
-        this.leafStem.setY(y + 19.0);
+        this.leafStem = new Rectangle(Constants.STEM_WIDTH, Constants.STEM_HEIGHT);
+        this.leafStem.setX(x - Constants.STEM_X_OFFSET);
+        this.leafStem.setY(y + Constants.STEM_Y_OFFSET);
 
         this.leafBody.setFill(this.color);
         this.leafStem.setFill(this.color);

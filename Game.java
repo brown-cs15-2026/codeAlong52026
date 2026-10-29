@@ -9,7 +9,7 @@ public class Game {
 
     public Game (Pane gamePane) {
         this.gamePane = gamePane;
-        Leaf firstLeaf = new Leaf(this.gamePane, Color.RED, 50, 50);
+        Leaf firstLeaf = new Leaf(this.gamePane, Color.RED, Constants.FIRST_LEAF_X, Constants.FIRST_LEAF_Y);
     }
 
 }
