@@ -5,6 +5,7 @@ import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.paint.Color;
 
+
 public class Leaf {
 
     private Ellipse leafBody;
@@ -47,6 +48,7 @@ public class Leaf {
         this.leafStem.setFill(Color.FORESTGREEN);
         this.leafLeft.setFill(Color.FORESTGREEN);
         this.leafRight.setFill(Color.FORESTGREEN);
+        this.color = Color.FORESTGREEN;
     }
 
     public Color getColor() {
